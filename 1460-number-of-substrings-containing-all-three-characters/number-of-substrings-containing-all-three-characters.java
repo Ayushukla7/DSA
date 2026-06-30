@@ -1,6 +1,5 @@
 class Solution {
     public int numberOfSubstrings(String s) {
-
         int[] freq = new int[3];
         int left = 0;
         int ans = 0;
