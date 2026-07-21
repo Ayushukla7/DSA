@@ -7,6 +7,7 @@ class Solution {
 
         while(start <= end){
             int mid = start + (end-start)/2;
+            //golden rules for 2d row col
             int row = mid / cols;
             int col = mid % cols;
             if (matrix[row][col]==target){
