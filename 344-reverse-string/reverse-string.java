@@ -1,13 +1,20 @@
 class Solution {
     public void reverseString(char[] s) {
-       int start = 0;
-       int end = s.length-1;
-       while(start<end){
-        char temp = s[start];
-        s[start] = s[end];
-        s[end] = temp;
-        start = start+1;
-        end = end -1;
-       } 
+        reverse(s,0,s.length-1);
+    }
+    void reverse(char[] s, int left, int right) {
+
+        // Base case: dono pointers mil gaye
+        if (left >= right) {
+            return;
+        }
+
+        // Dono characters ko swap karo
+        char temp = s[left];
+        s[left] = s[right];
+        s[right] = temp;
+
+        // Aage badho
+        reverse(s, left + 1, right - 1);
     }
 }
